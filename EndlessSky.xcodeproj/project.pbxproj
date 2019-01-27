@@ -450,12 +450,12 @@
 		A9CC52701950C9F6004E4E22 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		A9CC52711950C9F6004E4E22 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A9D40D19195DFAA60086EE52 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
-		B59015FA21ED2DD100799178 /* libpangocairo-1.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libpangocairo-1.0.0.dylib"; path = "/usr/local/Cellar/pango/1.42.4/lib/libpangocairo-1.0.0.dylib"; sourceTree = "<absolute>"; };
-		B59015FF21ED2EC400799178 /* libpango-1.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libpango-1.0.0.dylib"; path = "/usr/local/Cellar/pango/1.42.4/lib/libpango-1.0.0.dylib"; sourceTree = "<absolute>"; };
-		B590160221ED330400799178 /* libglib-2.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libglib-2.0.0.dylib"; path = "/usr/local/Cellar/glib/2.58.2/lib/libglib-2.0.0.dylib"; sourceTree = "<absolute>"; };
-		B590160521ED3D0C00799178 /* libcairo.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcairo.2.dylib; path = /usr/local/Cellar/cairo/1.16.0/lib/libcairo.2.dylib; sourceTree = "<absolute>"; };
-		B590160821ED3F7900799178 /* libfontconfig.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfontconfig.1.dylib; path = /usr/local/Cellar/fontconfig/2.13.1/lib/libfontconfig.1.dylib; sourceTree = "<absolute>"; };
-		B590160B21ED43EB00799178 /* libgobject-2.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libgobject-2.0.0.dylib"; path = "/usr/local/Cellar/glib/2.58.2/lib/libgobject-2.0.0.dylib"; sourceTree = "<absolute>"; };
+		B59015FA21ED2DD100799178 /* libpangocairo-1.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libpangocairo-1.0.0.dylib"; path = "/usr/local/lib/libpangocairo-1.0.0.dylib"; sourceTree = "<absolute>"; };
+		B59015FF21ED2EC400799178 /* libpango-1.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libpango-1.0.0.dylib"; path = "/usr/local/lib/libpango-1.0.0.dylib"; sourceTree = "<absolute>"; };
+		B590160221ED330400799178 /* libglib-2.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libglib-2.0.0.dylib"; path = "/usr/local/lib/libglib-2.0.0.dylib"; sourceTree = "<absolute>"; };
+		B590160521ED3D0C00799178 /* libcairo.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcairo.2.dylib; path = /usr/local/lib/libcairo.2.dylib; sourceTree = "<absolute>"; };
+		B590160821ED3F7900799178 /* libfontconfig.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfontconfig.1.dylib; path = /usr/local/lib/libfontconfig.1.dylib; sourceTree = "<absolute>"; };
+		B590160B21ED43EB00799178 /* libgobject-2.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libgobject-2.0.0.dylib"; path = "/usr/local/lib/libgobject-2.0.0.dylib"; sourceTree = "<absolute>"; };
 		B590160E21ED49F200799178 /* Cache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Cache.h; path = source/Cache.h; sourceTree = "<group>"; };
 		B590160F21ED49F200799178 /* Cache.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Cache.cpp; path = source/Cache.cpp; sourceTree = "<group>"; };
 		B590161121ED4A0E00799178 /* Utf8.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Utf8.cpp; path = source/Utf8.cpp; sourceTree = "<group>"; };
@@ -1140,12 +1140,8 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"/usr/local/opt/libjpeg-turbo/include",
-					/usr/local/include,
-					"/usr/local/Cellar/pango/1.42.4/include/pango-1.0",
-					"/usr/local/Cellar/glib/2.58.2/include/glib-2.0",
-					"/usr/local/Cellar/glib/2.58.2/lib/glib-2.0/include",
-					/usr/local/Cellar/cairo/1.16.0/include/cairo,
-					/usr/local/Cellar/fontconfig/2.13.1/include/fontconfig,
+					"/usr/local/include/**",
+					"/usr/local/lib/glib-2.0/include",
 				);
 				INFOPLIST_FILE = "XCode/EndlessSky-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
@@ -1153,10 +1149,6 @@
 					"$(inherited)",
 					"/usr/local/opt/libjpeg-turbo/lib",
 					/usr/local/lib,
-					/usr/local/Cellar/pango/1.42.4/lib,
-					/usr/local/Cellar/glib/2.58.2/lib,
-					/usr/local/Cellar/cairo/1.16.0/lib,
-					/usr/local/Cellar/fontconfig/2.13.1/lib,
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_BUNDLE_IDENTIFIER = "${PRODUCT_NAME:rfc1034identifier}";
@@ -1175,12 +1167,8 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"/usr/local/opt/libjpeg-turbo/include",
-					/usr/local/include,
-					"/usr/local/Cellar/pango/1.42.4/include/pango-1.0",
-					"/usr/local/Cellar/glib/2.58.2/include/glib-2.0",
-					"/usr/local/Cellar/glib/2.58.2/lib/glib-2.0/include",
-					/usr/local/Cellar/cairo/1.16.0/include/cairo,
-					/usr/local/Cellar/fontconfig/2.13.1/include/fontconfig,
+					"/usr/local/include/**",
+					"/usr/local/lib/glib-2.0/include",
 				);
 				INFOPLIST_FILE = "XCode/EndlessSky-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
@@ -1188,10 +1176,6 @@
 					"$(inherited)",
 					"/usr/local/opt/libjpeg-turbo/lib",
 					/usr/local/lib,
-					/usr/local/Cellar/pango/1.42.4/lib,
-					/usr/local/Cellar/glib/2.58.2/lib,
-					/usr/local/Cellar/cairo/1.16.0/lib,
-					/usr/local/Cellar/fontconfig/2.13.1/lib,
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_BUNDLE_IDENTIFIER = "${PRODUCT_NAME:rfc1034identifier}";
