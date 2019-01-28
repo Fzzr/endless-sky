@@ -15,6 +15,7 @@ PARTICULAR PURPOSE.  See the GNU General Public License for more details.
 #include "Files.h"
 #include "Font.h"
 
+#include <cstdlib>
 #include <map>
 #include <fontconfig/fontconfig.h>
 
@@ -26,6 +27,7 @@ namespace {
 	string fontDescription("Ubuntu");
 	string fontDescriptionForLayout("Ubuntu");
 	string fontLanguage("en");
+	char envBackend[] = "PANGOCAIRO_BACKEND=fc";
 }
 
 
@@ -48,6 +50,7 @@ const Font &FontSet::Get(int size)
 {
 	if(!fonts.count(size))
 	{
+		putenv(envBackend);
 		Font &font = fonts[size];
 		font.SetFontDescription(fontDescription);
 		font.SetLayoutReference(fontDescriptionForLayout);
