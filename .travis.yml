@@ -9,7 +9,6 @@ addons:
     - jpeg-turbo
     - sdl2
     - pango
-    update: true
 
 before_install:
   - brew update
