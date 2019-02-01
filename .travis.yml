@@ -56,3 +56,23 @@ notifications:
     email:
         on_success: never
         on_failure: change
+
+before_deploy:
+    - |
+        if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
+            zip EndlessSky.zip -r9 'build/$MODE/Endless Sky.app';
+        fi
+    - git config --local user.name "Ben Milman"
+    - git config --local user.email "bpmilman@gmail.com"
+    - export TRAVIS_TAG=${TRAVIS_TAG:-$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)}
+    - git tag $TRAVIS_TAG
+
+deploy:
+    provider: releases
+    api_key:
+        secure: MZy2V4bzVugosegy7RWIdZsPCLkHjLjDANG+/GF8wMh1vnntWZZyVKzi1fl7EXorWxf0pDhaEoq6iwAEtKIzp6anM2F1AkRPdztV35nzGNJX4YYWXtmnyHcV8yr9rI7QR9fYIhE9pAM8lzU8P7dXE8FVWnOPzoDPiuCH3UeE8CqFXGZAOeKwdzTs4bC7LOxyPs4Ao505AFa/2KStnnZeSF3FnFAQ7VA7kXOXKg4OKeunxeYP6wmR3mrODLS8fF9ipRbRBwcYPPkym+Q0tpJx7MEGtJYgEdSbnf/rQq1S++zj0hXO2Ic4+d5/I3Qe5GilevJFNsezEFQI0EYLV87ZJLncqLxe4/5QoyWM/NiTeaz0Wvtf8/S0P49xU7N7Ra/O+6MUJLOdSnwyfHMEv2pMI0KH6AP2Ap8ctudWQwHiNAkeDpxKxTFr/+7yXoRH5c+P/Xh1qr7xI5RsbKdFjlOa1fH0AzuLRzoRm03YzzVcctlQhQS1Yp4PS3YpTlfocjNLU2Nk81dKSE97CTg293JlRzLzZkdfEFQIbFr2ZjuPiCLr9hmbKnK5FztVl3Y/2L00Wmu1X5jMmFXtjAKTqq1JlQekWbg8J4qnMUodbduv9N91YM5xIlB79LO4UGUnUCIumFsR8kPkpKLRu4zK2KuFun+dE2tIg2Hz3N/1+AmInUY=
+    file: EndlessSky.zip
+    skip_cleanup: true
+    on:
+        repo: Fzzr/endless-sky
+        branch: build-macos
