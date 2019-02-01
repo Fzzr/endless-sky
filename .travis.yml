@@ -1,6 +1,8 @@
 language: cpp
 sudo: required
 
+if: tag IS blank
+
 matrix:
     include:
       - dist: trusty
@@ -63,7 +65,7 @@ before_deploy:
             cd "build/$MODE/Endless Sky.app/Contents/MacOS/"
             install_name_tool -change /usr/local/lib/libpng16.16.dylib @executable_path/../Frameworks/libpng16.16.dylib "Endless Sky"
             install_name_tool -change /usr/local/lib/libmad.0.2.1.dylib @executable_path/../Frameworks/libmad.0.2.1.dylib "Endless Sky"
-            install_name_tool -change /usr/local/lib/libSDL2-2.0.0.dylib @executable_path/../Frameworks/libSDL2-2.0.0.dylib "Endless Sky"
+            install_name_tool -change /usr/local/opt/sdl2/lib/libSDL2-2.0.0.dylib @executable_path/../Frameworks/libSDL2-2.0.0.dylib "Endless Sky"
             install_name_tool -change /usr/local/opt/jpeg-turbo/lib/libturbojpeg.0.dylib @executable_path/../Frameworks/libturbojpeg.0.dylib "Endless Sky"
             cd ../../../
             zip EndlessSky.zip -r9 "Endless Sky.app";
