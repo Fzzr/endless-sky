@@ -60,7 +60,7 @@ notifications:
 before_deploy:
     - |
         if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
-            zip EndlessSky.zip -r9 'build/$MODE/Endless Sky.app';
+            zip EndlessSky.zip -r9 "build/$MODE/Endless\ Sky.app";
         fi
     - git config --local user.name "Ben Milman"
     - git config --local user.email "bpmilman@gmail.com"
