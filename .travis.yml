@@ -6,17 +6,26 @@ matrix:
       - dist: trusty
       - dist: xenial
         env: DIST_DEPS=scons
+      # test 10.11 El Capitan
       - os: osx
+        osx_image: xcode8
+        env: MODE=Release
+      # test 10.12 Sierra
+      - os: osx
+        osx_image: xcode9.2
+        env: MODE=Release
+      # test 10.13 High Sierra
+      - os: osx
+        osx_image: xcode9.4
+        env: MODE=Release
+      # test 10.14 Mohave
+      - os: osx
+        osx_image: xcode10.2
         env: MODE=Release
 
 addons:
     homebrew:
-        packages:
-        - libmad
-        - libpng
-        - jpeg-turbo
-        - sdl2
-    update: true
+        brewfile: true
 
 git:
     quiet: true
