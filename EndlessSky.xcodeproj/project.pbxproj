@@ -1100,7 +1100,7 @@
 					"/usr/local/opt/jpeg-turbo@1.5.3/lib",
 					/usr/local/lib,
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = "${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "Endless Sky";
 				WRAPPER_EXTENSION = app;
@@ -1126,7 +1126,7 @@
 					"/usr/local/opt/jpeg-turbo@1.5.3/lib",
 					/usr/local/lib,
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = "${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "Endless Sky";
 				WRAPPER_EXTENSION = app;
