@@ -61,3 +61,11 @@ notifications:
     email:
         on_success: never
         on_failure: change
+deploy:
+  provider: releases
+  api_key:
+    secure: ICtcl6Z/4m3n08MPR4HH0mwfCKtHlDk5YcXkvQDWSJs7MPleDKyIDCsLD8hQlor2m/QP/g1u8dLQrQQ91GzMk0iQ7bJPoh8HHqXJ69lkh8UUt11ECgdDVN3bE0iEIigI8AnOHumrFiITzy+ShLKzRppW09KgYQT9/nOmEshjKD+5uSxqZd2L0lTJqauLPB6dsYJJ4SRspFs6nYNOpOd5TbfsPXTr0Lwb+voSiyga8awhqfbzZXlNKey3ADQsEKKoh6duB0qT1onTgKHK1JM/C+uPlTVCKPLVEKt//6dOmSJo1C0LpbJX6AVr+iCgxU6AiZMHVHhLZNOX6q2vWQlbzP08mXg44E8UAcZDwtZ+wLpaejQX4sFeYsgwUDsTCM/yze/skhtwRawXXyBbOYgViq78/xOm281b9lX17CrRPRIRM2r/wu1bB+2CpPS2WG/Vd8apUj/+77fhfiNqThVecsVMLbJ0WuAm6Ol1S1/eYSkowfwTiZXIZearXOgV4Lv2uxVBr8syI3XkWWG1rVHVOqIEa1knr2gMftWg9kII1sW+ubcjkdYLruWMWPuYF5HV8RAHFoG67ezJZ6BFD2Ey+tnmAKt43wZmIRAWOZg7/CNtGEL+7LXUF7seZERlULTaPC5XBvPKWNJQhoV5SohirY8L9qhqDnDXYxCH1pHsjUU=
+  file: EndlessSky-Nightly-Full.zip
+  skip_cleanup: true
+  on:
+    repo: Fzzr/endless-sky
