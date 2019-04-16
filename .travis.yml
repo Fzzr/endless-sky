@@ -27,10 +27,6 @@ git:
     quiet: true
     depth: 5
 
-branches:
-    except:
-        - gh-pages
-
 before_install:
     - |
         if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
